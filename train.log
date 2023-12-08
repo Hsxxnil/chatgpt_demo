@@ -1,0 +1,8 @@
+2023-12-08 11:56:20,097 [INFO]: HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2023-12-08 11:56:20,099 [INFO]: Uploaded file with id: file-wTYgkeR6cPOlxc5rHXwrHy4X
+2023-12-08 11:56:20,099 [INFO]: Waiting for file to process...
+2023-12-08 11:56:20,418 [INFO]: HTTP Request: GET https://api.openai.com/v1/files/file-wTYgkeR6cPOlxc5rHXwrHy4X "HTTP/1.1 200 OK"
+2023-12-08 11:56:20,419 [INFO]: File processed
+2023-12-08 11:56:20,419 [INFO]: FileObject(id='file-wTYgkeR6cPOlxc5rHXwrHy4X', bytes=431377, created_at=1702007780, filename='train_data.jsonl', object='file', purpose='fine-tune', status='processed', status_details=None)
+2023-12-08 11:56:21,580 [INFO]: HTTP Request: POST https://api.openai.com/v1/fine_tuning/jobs "HTTP/1.1 200 OK"
+2023-12-08 11:56:21,584 [INFO]: Job created with id: ftjob-AvX8Zfrd9R60R8sNOXwkq7xT
