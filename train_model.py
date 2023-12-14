@@ -46,10 +46,10 @@ def upload_file(file_name):
 
 if __name__ == '__main__':
     # Configure logger
-    log_file_name = input("Please input train test log file path (e.g. 230101_v1): ")
+    log_file_name = input("Please input the train log file path (e.g. 230101_v1): ")
     logger = configure_logging(log_file_name)
 
-    file_name = input("Please input the validation file path (e.g. 231208_v1/train_data.jsonl): ")
+    file_name = input("Please input the train file path (e.g. 231208_v1/train_data.jsonl): ")
     uploaded_file = upload_file(file_name)
 
     logger.info(uploaded_file)
