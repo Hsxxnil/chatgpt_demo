@@ -35,3 +35,16 @@
 2023-12-14 14:28:25,932 [INFO]: User: exit
 2023-12-14 14:28:25,932 [INFO]: GPT: Goodbye!
 2023-12-14 14:28:25,932 [INFO]: -------------------------
+2023-12-14 14:37:43,475 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10 "HTTP/1.1 200 OK"
+2023-12-14 14:37:43,698 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10&after=ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 14:37:49,037 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8VZJ76XX
+2023-12-14 14:37:49,037 [INFO]: -------------------------
+2023-12-14 14:38:12,662 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10 "HTTP/1.1 200 OK"
+2023-12-14 14:38:12,902 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10&after=ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 14:38:22,009 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8VZJ76XX
+2023-12-14 14:38:22,010 [INFO]: -------------------------
+2023-12-14 14:38:46,561 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 14:38:46,566 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 14:38:46,566 [INFO]: User: 2017年《财富》全球论坛自宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 14:38:46,566 [INFO]: GPT: 自2017年《财富》全球论坛宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 14:38:46,566 [INFO]: -------------------------

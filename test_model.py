@@ -100,6 +100,9 @@ if __name__ == "__main__":
         while True:
             user_input = input("User: ")
 
+            if user_input.lower() == 'exit':
+                break
+
             message = [
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": user_input}
@@ -110,9 +113,6 @@ if __name__ == "__main__":
             logger.info(f"User: {user_input}")
             logger.info(f"GPT: {test_result}")
             logger.info("-------------------------")
-
-            if user_input.lower() == 'exit':
-                break
 
     else:
         model_id = test_model
