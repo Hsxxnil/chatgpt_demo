@@ -14,7 +14,7 @@ def configure_logging():
     """
     Configures logging settings.
     """
-    logging.basicConfig(filename='train.log', level=logging.INFO,
+    logging.basicConfig(filename='231208_v1/train.log', level=logging.INFO,
                         format='%(asctime)s [%(levelname)s]: %(message)s')
     return logging.getLogger()
 
@@ -59,7 +59,7 @@ if __name__ == '__main__':
         organization=organization,
     )
 
-    file_name = "train_data_example.jsonl"
+    file_name = "231208_v1/train_data_simplified.jsonl"
     uploaded_file = upload_file(file_name)
 
     logger.info(uploaded_file)

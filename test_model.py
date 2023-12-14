@@ -14,7 +14,7 @@ def configure_logging():
     """
     Configures logging settings.
     """
-    logging.basicConfig(filename='test_output.log', level=logging.INFO,
+    logging.basicConfig(filename='231208_v1/test.log', level=logging.INFO,
                         format='%(asctime)s [%(levelname)s]: %(message)s')
     return logging.getLogger()
 
