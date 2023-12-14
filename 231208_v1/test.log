@@ -26,3 +26,31 @@
 2023-12-14 12:27:50,328 [INFO]: User: 2017年《财富》全球论坛自宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
 2023-12-14 12:27:50,328 [INFO]: GPT: 自2017年《财富》全球论坛宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
 2023-12-14 12:27:50,328 [INFO]: -------------------------
+2023-12-14 13:01:06,868 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs/ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 13:01:06,876 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8TNEyQgX
+2023-12-14 13:01:06,876 [INFO]: -------------------------
+2023-12-14 13:01:30,319 [INFO]: User: 美国虽然目前仍是世界第一大经济体，但中国正在利用国企提升国内外影响力，稳步赶超美国。
+2023-12-14 13:01:30,641 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2023-12-14 13:03:45,367 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs/ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 13:03:45,373 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8TNEyQgX
+2023-12-14 13:03:45,373 [INFO]: -------------------------
+2023-12-14 13:03:56,788 [INFO]: User: 美国虽然目前仍是世界第一大经济体，但中国正在利用国企提升国内外影响力，稳步赶超美国。
+2023-12-14 13:03:57,929 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 13:03:57,934 [INFO]: GPT: 中国正在利用国企提升国内外影响力，稳步赶超美国，尽管美国目前仍是世界第一大经济体。
+2023-12-14 13:03:57,935 [INFO]: -------------------------
+2023-12-14 13:07:11,604 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs/ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 13:07:11,612 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8TNEyQgX
+2023-12-14 13:07:11,612 [INFO]: -------------------------
+2023-12-14 13:07:35,688 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 13:07:35,690 [INFO]: User: 2017年《财富》全球论坛自宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 13:07:37,173 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 13:07:37,180 [INFO]: GPT: 自2017年《财富》全球论坛宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 13:07:37,180 [INFO]: -------------------------
+2023-12-14 13:08:32,496 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs/ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 13:08:32,504 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8TNEyQgX
+2023-12-14 13:08:32,504 [INFO]: -------------------------
+2023-12-14 13:08:53,323 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 13:08:53,330 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 13:08:53,330 [INFO]: User: 2017年《财富》全球论坛自宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 13:08:53,330 [INFO]: GPT: 自2017年《财富》全球论坛宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 13:08:53,331 [INFO]: -------------------------

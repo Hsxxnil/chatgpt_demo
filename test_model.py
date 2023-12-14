@@ -83,10 +83,16 @@ if __name__ == '__main__':
     # test the model
     test_type = input("Please input test type (1: test by chat case; 2: test by file): ")
     if test_type == "1":
-        message = input("User: ")
-        logger.info(f'User: {message}')
+        system_message = input("System >>> ")
+        user_input = input("User: ")
+        message = [
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": user_input}
+        ]
         result = test_by_case(train_result.fine_tuned_model, message)
         print(f"GPT: {result}")
+        logger.info(f'System >>> {system_message}')
+        logger.info(f'User: {user_input}')
         logger.info(f"GPT: {result}")
         logger.info('-------------------------')
     else:
