@@ -1,20 +1,19 @@
 from openai import OpenAI
 import time
 import logging
+from config import config
 
-api_key = ""
-organization = ""
 client = OpenAI(
-    api_key=api_key,
-    organization=organization,
+    api_key=config.openai_api_key,
+    organization=config.openai_organization_id
 )
 
 
-def configure_logging():
+def configure_logging(file_path):
     """
     Configures logging settings.
     """
-    logging.basicConfig(filename='231208_v1/train.log', level=logging.INFO,
+    logging.basicConfig(filename=f'{file_path}/train.log', level=logging.INFO,
                         format='%(asctime)s [%(levelname)s]: %(message)s')
     return logging.getLogger()
 
@@ -47,19 +46,10 @@ def upload_file(file_name):
 
 if __name__ == '__main__':
     # Configure logger
-    logger = configure_logging()
+    log_file_name = input("Please input train test log file path (e.g. 230101_v1): ")
+    logger = configure_logging(log_file_name)
 
-    # Enter your OpenAI API key and organization ID
-    api_key = input("Enter your OpenAI API key: ")
-    organization = input("Enter your OpenAI organization ID: ")
-
-    # Update the client instance with new API key and organization ID
-    client = OpenAI(
-        api_key=api_key,
-        organization=organization,
-    )
-
-    file_name = "231208_v1/train_data_simplified.jsonl"
+    file_name = input("Please input the validation file path (e.g. 231208_v1/train_data.jsonl): ")
     uploaded_file = upload_file(file_name)
 
     logger.info(uploaded_file)

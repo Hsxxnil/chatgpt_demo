@@ -1,20 +1,19 @@
 from openai import OpenAI
 import json
 import logging
+from config import config
 
-api_key = ""
-organization = ""
 client = OpenAI(
-    api_key=api_key,
-    organization=organization,
+    api_key=config.openai_api_key,
+    organization=config.openai_organization_id
 )
 
 
-def configure_logging():
+def configure_logging(file_path):
     """
     Configures logging settings.
     """
-    logging.basicConfig(filename='231208_v1/test.log', level=logging.INFO,
+    logging.basicConfig(filename=f'{file_path}/test.log', level=logging.INFO,
                         format='%(asctime)s [%(levelname)s]: %(message)s')
     return logging.getLogger()
 
@@ -69,17 +68,8 @@ def test(model_id, file_name):
 
 if __name__ == '__main__':
     # Configure logger
-    logger = configure_logging()
-
-    # Enter your OpenAI API key and organization ID
-    api_key = input("Enter your OpenAI API key: ")
-    organization = input("Enter your OpenAI organization ID: ")
-
-    # Update the client instance with new API key and organization ID
-    client = OpenAI(
-        api_key=api_key,
-        organization=organization,
-    )
+    log_file_path = input("Please input the test log file path (e.g. 230101_v1): ")
+    logger = configure_logging(log_file_path)
 
     # Model ID will be obtained from the e-mail when the training is complete.
     # Alternatively, you can use the following code to get the model_id:
@@ -93,6 +83,6 @@ if __name__ == '__main__':
 
     # test the model
     model_id = train_result.fine_tuned_model
-    file_name = input("Please input the validation file name (e.g. validation.jsonl): ")
+    file_name = input("Please input the validation file path (e.g. 230101_v1/valid_data.jsonl): ")
     test(model_id, file_name)
     print("Test completed.")
