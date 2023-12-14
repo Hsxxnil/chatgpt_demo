@@ -9,3 +9,6 @@ train:
 
 test:
 	python test_model.py
+
+token:
+	python get_token_usage.py
