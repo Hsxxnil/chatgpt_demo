@@ -50,7 +50,7 @@ if __name__ == '__main__':
     logger = configure_logging(log_file_name)
 
     # Upload train file
-    train_file_name = input("Please input the train file path (e.g. 231208_v1/train_data.jsonl): ")
+    train_file_name = input("Please input the train file path (e.g. 231208_v1_success/train_data.jsonl): ")
     uploaded_train_file = upload_file(train_file_name)
     logger.info(f"Uploaded train file with id: {uploaded_train_file.id}")
 
