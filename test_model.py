@@ -71,8 +71,7 @@ if __name__ == '__main__':
     log_file_path = input("Please input the test log file path (e.g. 230101_v1): ")
     logger = configure_logging(log_file_path)
 
-    # Model ID will be obtained from the e-mail when the training is complete.
-    # Alternatively, you can use the following code to get the model_id:
+    # Retrieve the model ID
     fine_tuning_job_id = input("Please input fine_tuning_job_id: ")
     train_result = client.fine_tuning.jobs.retrieve(
         fine_tuning_job_id=fine_tuning_job_id
@@ -82,7 +81,17 @@ if __name__ == '__main__':
     logger.info('-------------------------')
 
     # test the model
-    model_id = train_result.fine_tuned_model
-    file_name = input("Please input the validation file path (e.g. 230101_v1/valid_data.jsonl): ")
-    test(model_id, file_name)
+    test_type = input("Please input test type (1: test by chat case; 2: test by file): ")
+    if test_type == "1":
+        message = input("User: ")
+        logger.info(f'User: {message}')
+        result = test_by_case(train_result.fine_tuned_model, message)
+        print(f"GPT: {result}")
+        logger.info(f"GPT: {result}")
+        logger.info('-------------------------')
+    else:
+        model_id = train_result.fine_tuned_model
+        file_name = input("Please input the validation file path (e.g. 230101_v1/test_data.jsonl): ")
+        test(model_id, file_name)
+
     print("Test completed.")

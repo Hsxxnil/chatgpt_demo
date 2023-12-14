@@ -49,11 +49,22 @@ if __name__ == '__main__':
     log_file_name = input("Please input the train log file path (e.g. 230101_v1): ")
     logger = configure_logging(log_file_name)
 
-    file_name = input("Please input the train file path (e.g. 231208_v1/train_data.jsonl): ")
-    uploaded_file = upload_file(file_name)
+    # Upload train file
+    train_file_name = input("Please input the train file path (e.g. 231208_v1/train_data.jsonl): ")
+    uploaded_train_file = upload_file(train_file_name)
+    logger.info(f"Uploaded train file with id: {uploaded_train_file.id}")
 
-    logger.info(uploaded_file)
-    job = client.fine_tuning.jobs.create(training_file=uploaded_file.id, model="gpt-3.5-turbo-0613")
+    # Upload valid file
+    valid_file_name = input("Please input the validation file path (e.g. 230101_v1/valid_data.jsonl): ")
+    uploaded_valid_file = upload_file(valid_file_name)
+    logger.info(f"Uploaded valid file with id: {uploaded_valid_file.id}")
+
+    # Create fine-tuning job
+    job = client.fine_tuning.jobs.create(
+        training_file=uploaded_train_file.id,
+        validation_file=uploaded_valid_file.id,
+        model="gpt-3.5-turbo-0613"
+    )
     print(f"Job created with id: {job.id}")
     logger.info(f"Job created with id: {job.id}")
 
