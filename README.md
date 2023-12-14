@@ -15,31 +15,35 @@ You're free to modify the input files as per your requirements.
 Ensure you have the latest OpenAI package installed (version `openai>=1.3.7`).
 
 ```bash
-pip install -r requirements.txt
+make setup
 ```
 
-### 2. Data Preparation
+### 2. Fill in config file
+
+Please fill in your `API key` and `organization ID` in the `config.py` file.
+
+### 3. Data Preparation
 
 Prepare your custom training data (e.g., `train_data.jsonl`) and validation data (e.g., `valid_data.jsonl`).
 
 **Note:** The size of the input file is currently capped at 50MB. For more details, refer to the [OpenAI documentation on dataset preparation](https://platform.openai.com/docs/guides/fine-tuning/preparing-your-dataset).
 
-### 3. Model Training
+### 4. Model Training
 
 To train your model, use the `train_model.py` script:
 
 ```bash
-python train_model.py
+make train
 ```
 
 **Important:** In `train_model.py`, ensure that you first upload the custom data to OpenAI. Once the upload is successful, the training will commence. The training process might take several hours, so please be patient.
 
-### 4. Model Testing
+### 5. Model Testing
 
 To test your fine-tuned model, use the `test_model.py` script:
 
 ```bash
-python test_model.py
+make test
 ```
 
 **Note:** You need to get the model id before the test.
