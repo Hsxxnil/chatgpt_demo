@@ -1,0 +1,5 @@
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：他对这个项目的贡献是不可忽视的，为团队的成功立下了汗马功劳。\n"}, {"role": "assistant", "content": "他对这个项目的贡献是不可忽视的，为团队的成功立下了汗马功劳。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：这家公司在环保方面取得了显著的成就，推动了行业向可持续发展的方向迈进。\n"}, {"role": "assistant", "content": "这家公司在环保方面取得了显著的成就，推动了行业迈向可持续发展的方向。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：在科技创新的道路上，这个团队走在了前列，不断推出引领行业的新产品。\n"}, {"role": "assistant", "content": "在科技创新的道路上，这个团队走在前列，不断推出引领行业的新产品。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：她的领导风格鼓励团队成员发挥创造力，共同追求卓越的目标。\n"}, {"role": "assistant", "content": "她的领导风格鼓励团队成员发挥创造力，共同追求卓越的目标。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：在这个竞争激烈的市场中，这家企业凭借优质的产品和卓越的服务赢得了广泛的认可。\n"}, {"role": "assistant", "content": "在这个竞争激烈的市场中，这家企业凭借优质的产品和卓越的服务赢得了广泛的认可。\n"}]}
