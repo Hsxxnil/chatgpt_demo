@@ -75,7 +75,9 @@ if __name__ == "__main__":
                 "created_at": created_at_formatted,
             }
             result_list.append(fine_tuned_model_info)
-        print(f"Fine-tuning models >>> {result_list}")
+
+        for model_info in result_list:
+            print(f"Fine-tuning model >>> {model_info}")
 
         # choose model
         train_model = input("Please input fine_tuning_model_id: ")
