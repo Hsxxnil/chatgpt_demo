@@ -1,3 +1,5 @@
+from datetime import datetime, timezone
+
 from openai import OpenAI
 import time
 import logging
@@ -13,8 +15,8 @@ def configure_logging(file_path):
     """
     Configures logging settings.
     """
-    logging.basicConfig(filename=f'{file_path}/train.log', level=logging.INFO,
-                        format='%(asctime)s [%(levelname)s]: %(message)s')
+    logging.basicConfig(filename=f"{file_path}/train.log", level=logging.INFO,
+                        format="%(asctime)s [%(levelname)s]: %(message)s")
     return logging.getLogger()
 
 
@@ -44,13 +46,13 @@ def upload_file(file_name):
     return file_upload
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Configure logger
     log_file_name = input("Please input the train log file path (e.g. 230101_v1): ")
     logger = configure_logging(log_file_name)
 
     # Upload train file
-    train_file_name = input("Please input the train file path (e.g. 231208_v1_success/train_data.jsonl): ")
+    train_file_name = input("Please input the train file path (e.g. 231208_v1/train_data.jsonl): ")
     uploaded_train_file = upload_file(train_file_name)
     logger.info(f"Uploaded train file with id: {uploaded_train_file.id}")
 
@@ -59,15 +61,35 @@ if __name__ == '__main__':
     uploaded_valid_file = upload_file(valid_file_name)
     logger.info(f"Uploaded valid file with id: {uploaded_valid_file.id}")
 
-    # Create fine-tuning job
+    # choose model
+    model_type = input("Please input the model type (1:custom; 2:pretrained): ")
+    if model_type == "1":
+        # list all the models fine-tuned.
+        result = client.fine_tuning.jobs.list(limit=10)
+        result_list = []
+        for item in result:
+            created_at_utc = datetime.fromtimestamp(item.created_at, tz=timezone.utc)
+            created_at_formatted = created_at_utc.strftime('%Y-%m-%d %H:%M:%S')
+            fine_tuned_model_info = {
+                "model_name": item.fine_tuned_model,
+                "created_at": created_at_formatted,
+            }
+            result_list.append(fine_tuned_model_info)
+        print(f"Fine-tuning models >>> {result_list}")
+
+        # choose model
+        train_model = input("Please input fine_tuning_model_id: ")
+
+    else:
+        train_model = "gpt-3.5-turbo-0613"
+
+    # Create a fine-tuning job
     job = client.fine_tuning.jobs.create(
         training_file=uploaded_train_file.id,
         validation_file=uploaded_valid_file.id,
-        model="gpt-3.5-turbo-0613"
+        model=train_model
     )
+    print(f"Model ID >>> {train_model}")
+    logger.info(f"Model ID >>> {train_model}")
     print(f"Job created with id: {job.id}")
     logger.info(f"Job created with id: {job.id}")
-
-    # Note: If you forget the job id, you can use the following code to list all the models fine-tuned.
-    # result = openai.FineTuningJob.list(limit=10)
-    # print(result)

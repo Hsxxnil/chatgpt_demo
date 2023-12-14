@@ -1,3 +1,5 @@
+from datetime import datetime, timezone
+
 from openai import OpenAI
 import json
 import logging
@@ -13,8 +15,8 @@ def configure_logging(file_path):
     """
     Configures logging settings.
     """
-    logging.basicConfig(filename=f'{file_path}/test.log', level=logging.INFO,
-                        format='%(asctime)s [%(levelname)s]: %(message)s')
+    logging.basicConfig(filename=f"{file_path}/test.log", level=logging.INFO,
+                        format="%(asctime)s [%(levelname)s]: %(message)s")
     return logging.getLogger()
 
 
@@ -26,7 +28,7 @@ def read_messages_from_jsonl(filename):
     :return: A list of messages.
     """
     messages_list = []
-    with open(filename, 'r', encoding='utf-8') as f:
+    with open(filename, "r", encoding="utf-8") as f:
         for line in f:
             entry = json.loads(line)
             messages_list.append(entry["messages"])
@@ -60,43 +62,60 @@ def test(model_id, file_name):
         system_message = next((msg["content"] for msg in message if msg["role"] == "system"), None)
         user_question = next((msg["content"] for msg in message if msg["role"] == "user"), None)
         result = test_by_case(model_id, message)
-        logger.info(f'System >>> {system_message}')
-        logger.info(f'User: {user_question}')
-        logger.info(f'GPT: {result}')
-        logger.info('-------------------------')
+        logger.info(f"System >>> {system_message}")
+        logger.info(f"User: {user_question}")
+        logger.info(f"GPT: {result}")
+        logger.info("-------------------------")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Configure logger
     log_file_path = input("Please input the test log file path (e.g. 230101_v1): ")
     logger = configure_logging(log_file_path)
 
-    # Retrieve the model ID
-    fine_tuning_job_id = input("Please input fine_tuning_job_id: ")
-    train_result = client.fine_tuning.jobs.retrieve(
-        fine_tuning_job_id=fine_tuning_job_id
-    )
-    print(f"Model ID >>> {train_result.fine_tuned_model}")
-    logger.info(f"Model ID >>> {train_result.fine_tuned_model}")
-    logger.info('-------------------------')
+    # list all the models fine-tuned.
+    result = client.fine_tuning.jobs.list(limit=10)
+    result_list = []
+    for item in result:
+        created_at_utc = datetime.fromtimestamp(item.created_at, tz=timezone.utc)
+        created_at_formatted = created_at_utc.strftime('%Y-%m-%d %H:%M:%S')
+        fine_tuned_model_info = {
+            "model_name": item.fine_tuned_model,
+            "created_at": created_at_formatted,
+        }
+        result_list.append(fine_tuned_model_info)
+    print(f"Fine-tuning models >>> {result_list}")
+
+    # choose model
+    test_model = input("Please input fine_tuning_model_id: ")
+    print(f"Model ID >>> {test_model}")
+    logger.info(f"Model ID >>> {test_model}")
+    logger.info("-------------------------")
 
     # test the model
     test_type = input("Please input test type (1: test by chat case; 2: test by file): ")
     if test_type == "1":
+        print("If you want to exit, please input 'exit'.")
         system_message = input("System >>> ")
-        user_input = input("User: ")
-        message = [
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": user_input}
-        ]
-        result = test_by_case(train_result.fine_tuned_model, message)
-        print(f"GPT: {result}")
-        logger.info(f'System >>> {system_message}')
-        logger.info(f'User: {user_input}')
-        logger.info(f"GPT: {result}")
-        logger.info('-------------------------')
+        while True:
+            user_input = input("User: ")
+
+            message = [
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_input}
+            ]
+            test_result = test_by_case(test_model, message)
+            print(f"GPT: {test_result}")
+            logger.info(f"System >>> {system_message}")
+            logger.info(f"User: {user_input}")
+            logger.info(f"GPT: {test_result}")
+            logger.info("-------------------------")
+
+            if user_input.lower() == 'exit':
+                break
+
     else:
-        model_id = train_result.fine_tuned_model
+        model_id = test_model
         file_name = input("Please input the validation file path (e.g. 230101_v1/test_data.jsonl): ")
         test(model_id, file_name)
 
