@@ -1,0 +1,37 @@
+2023-12-14 14:21:01,763 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10 "HTTP/1.1 200 OK"
+2023-12-14 14:21:01,993 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10&after=ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 14:21:20,538 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8VZJ76XX
+2023-12-14 14:21:20,538 [INFO]: -------------------------
+2023-12-14 14:21:59,870 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 14:21:59,875 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 14:21:59,875 [INFO]: User: 这次羽毛球邀请赛在新建的贺家山体育馆举行，参赛选手通过小组赛和复赛、决赛的激烈角逐，最后张碧江、邓丹捷分别获得了冠亚军。
+2023-12-14 14:21:59,875 [INFO]: GPT: 这次羽毛球邀请赛在新建的贺家山体育馆举行，参赛选手通过小组赛和复赛、决赛的激烈角逐，最后张碧江、邓丹捷分别获得了冠亚军。
+2023-12-14 14:21:59,875 [INFO]: -------------------------
+2023-12-14 14:23:32,761 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10 "HTTP/1.1 200 OK"
+2023-12-14 14:23:32,984 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10&after=ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 14:23:40,700 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8VZJ76XX
+2023-12-14 14:23:40,701 [INFO]: -------------------------
+2023-12-14 14:24:08,438 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 14:24:08,446 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 14:24:08,446 [INFO]: User: 2017年《财富》全球论坛自宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 14:24:08,446 [INFO]: GPT: 自2017年《财富》全球论坛宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 14:24:08,446 [INFO]: -------------------------
+2023-12-14 14:27:43,736 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10 "HTTP/1.1 200 OK"
+2023-12-14 14:27:43,949 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10&after=ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 14:27:52,505 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8VZJ76XX
+2023-12-14 14:27:52,506 [INFO]: -------------------------
+2023-12-14 14:28:08,727 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 14:28:08,733 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 14:28:08,733 [INFO]: User: 这次羽毛球邀请赛在新建的贺家山体育馆举行，参赛选手通过小组赛和复赛、决赛的激烈角逐，最后张碧江、邓丹捷分别获得了冠亚军。
+2023-12-14 14:28:08,733 [INFO]: GPT: 这次羽毛球邀请赛在新建的贺家山体育馆举行，参赛选手通过小组赛和复赛、决赛的激烈角逐，最后张碧江、邓丹捷分别获得了冠亚军。
+2023-12-14 14:28:08,733 [INFO]: -------------------------
+2023-12-14 14:28:21,696 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 14:28:21,700 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 14:28:21,700 [INFO]: User: 2017年《财富》全球论坛自宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 14:28:21,700 [INFO]: GPT: 自2017年《财富》全球论坛宣布落户广州以来，《财富》杂志将目光聚焦在广州，以财富为媒，向世界展示一个充满底蕴又创新进取的广州。
+2023-12-14 14:28:21,700 [INFO]: -------------------------
+2023-12-14 14:28:25,929 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 14:28:25,932 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 14:28:25,932 [INFO]: User: exit
+2023-12-14 14:28:25,932 [INFO]: GPT: Goodbye!
+2023-12-14 14:28:25,932 [INFO]: -------------------------

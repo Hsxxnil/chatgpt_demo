@@ -1,0 +1,5 @@
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：在项目的执行过程中，团队克服了各种困难，圆满完成了任务。\n"}, {"role": "assistant", "content": "在项目的执行过程中，团队克服了各种困难，圆满完成了任务。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：这位演员在影片中表现出色，赢得了观众的热烈掌声。\n"}, {"role": "assistant", "content": "这位演员在影片中表现出色，赢得了观众的热烈掌声。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：这本书的内容丰富多彩，深入浅出，适合各个年龄段的读者。\n"}, {"role": "assistant", "content": "这本书的内容丰富多彩，深入浅出，适合各个年龄段的读者。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：在这次比赛中，运动员们发挥出色，为观众呈现了一场精彩的比赛。\n"}, {"role": "assistant", "content": "在这次比赛中，运动员们发挥出色，为观众呈现了一场精彩的比赛。\n"}]}
+{"messages": [{"role": "system", "content": "你是一个汉语语法纠错器。"}, {"role": "user", "content": "检测这个句子的语法错误：这次活动的组织安排得井井有条，得到了与会者的一致好评。\n"}, {"role": "assistant", "content": "这次活动的组织安排得井井有条，得到了与会者的一致好评。\n"}]}

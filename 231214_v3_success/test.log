@@ -1,0 +1,9 @@
+2023-12-14 13:41:27,613 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs/ftjob-Y7zeHOk1YroL9kjkJOkFA2im "HTTP/1.1 200 OK"
+2023-12-14 13:41:27,621 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8VYi63LE
+2023-12-14 13:41:27,621 [INFO]: -------------------------
+2023-12-14 13:42:00,784 [INFO]: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2023-12-14 13:42:00,793 [INFO]: System >>> 你是一个汉语语法纠错器。
+2023-12-14 13:42:00,793 [INFO]: User: 检测这个句子的语法错误：在项目的执行过程中，团队克服了各种困难，圆满完成了任务。
+2023-12-14 13:42:00,793 [INFO]: GPT: 在项目的执行过程中，团队克服了各种困难，圆满完成了任务。
+
+2023-12-14 13:42:00,793 [INFO]: -------------------------

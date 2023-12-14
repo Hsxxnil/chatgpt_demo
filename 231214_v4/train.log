@@ -1,0 +1,18 @@
+2023-12-14 14:08:28,655 [INFO]: HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2023-12-14 14:08:28,658 [INFO]: Uploaded file with id: file-j1W2dQrLYer2GdRABmVS9ctA
+2023-12-14 14:08:28,658 [INFO]: Waiting for file to process...
+2023-12-14 14:08:28,951 [INFO]: HTTP Request: GET https://api.openai.com/v1/files/file-j1W2dQrLYer2GdRABmVS9ctA "HTTP/1.1 200 OK"
+2023-12-14 14:08:28,953 [INFO]: File processed
+2023-12-14 14:08:28,953 [INFO]: Uploaded train file with id: file-j1W2dQrLYer2GdRABmVS9ctA
+2023-12-14 14:08:46,054 [INFO]: HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2023-12-14 14:08:46,056 [INFO]: Uploaded file with id: file-rFC1CYfWsFeoxHOLoKabjAe9
+2023-12-14 14:08:46,056 [INFO]: Waiting for file to process...
+2023-12-14 14:08:46,329 [INFO]: HTTP Request: GET https://api.openai.com/v1/files/file-rFC1CYfWsFeoxHOLoKabjAe9 "HTTP/1.1 200 OK"
+2023-12-14 14:08:46,330 [INFO]: File processed
+2023-12-14 14:08:46,331 [INFO]: Uploaded valid file with id: file-rFC1CYfWsFeoxHOLoKabjAe9
+2023-12-14 14:08:48,608 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10 "HTTP/1.1 200 OK"
+2023-12-14 14:08:48,826 [INFO]: HTTP Request: GET https://api.openai.com/v1/fine_tuning/jobs?limit=10&after=ftjob-AvX8Zfrd9R60R8sNOXwkq7xT "HTTP/1.1 200 OK"
+2023-12-14 14:09:11,802 [INFO]: Model ID >>> ft:gpt-3.5-turbo-0613:sien::8TNEyQgX
+2023-12-14 14:09:11,803 [INFO]: -------------------------
+2023-12-14 14:09:12,878 [INFO]: HTTP Request: POST https://api.openai.com/v1/fine_tuning/jobs "HTTP/1.1 200 OK"
+2023-12-14 14:09:12,883 [INFO]: Job created with id: ftjob-X0xtQszC5PRVSM2vxYUc3k9l
